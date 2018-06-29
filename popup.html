@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Popup</title>
+    <link href="css/foundation.css" rel="stylesheet">
+    <link href="popup.css" rel="stylesheet">
+    <script src="js/vendor/jquery-1.11.3.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script src="js/gcm.js"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <nav class="top-bar" data-topbar role="navigation">
+          <ul class="title-area">
+            <li class="logo">
+              <img src="logo.png">
+            </li>
+          </ul>
+
+          <section class="top-bar-section">
+            <!-- Left Nav Section -->
+            <ul class="left nav-buttons">
+              <input type="text" onChange="" class="searchText" />
+              <svg fill="#c93f3c" height="1em" width="1em" viewBox="0 0 40 40" 
+                style="vertical-align: middle;position: absolute; top: 3px; right: 0px;"><g><path d="m15.9 23.4c4.1 0 7.5-3.4 7.5-7.5s-3.4-7.5-7.5-7.5-7.5 3.3-7.5 7.5 3.3 7.5 7.5 7.5z m10 0l8.2 8.2-2.5 2.5-8.2-8.2v-1.4l-0.5-0.4c-1.9 1.6-4.4 2.5-7 2.5-6.1 0-10.9-4.7-10.9-10.7s4.8-10.9 10.9-10.9 10.7 4.8 10.7 10.9c0 2.6-0.9 5.1-2.5 7l0.4 0.5h1.4z"></path></g></svg>
+            </ul>
+            <p class="left notifications">Notifications</p>
+            <div class="onoffswitch left">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="notification-switch">
+              <label class="onoffswitch-label" for="notification-switch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+            <a href="#" class="logout right" data-method="delete"></a>
+          </section>
+      </nav>
+      <div class="fundingsTabMenuContainer">
+        <div class="fundingsTabMenuContainer__tabs">
+          <div class="fundingsTabMenuContainer__tabs__button fundingsTabMenuContainer__tab__all active" id="fundingFeed">
+            Fundings
+          </div>
+          <div class="fundingsTabMenuContainer__tabs__button fundingsTabMenuContainer__tab__favorite " id="newsFeed">
+            News
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-screen">
+
+      <div class="login-screen">
+        <p class="login-form text-center">
+          You are not logged in. Please
+          Log in or <a href="http://34.235.221.159:8080/sign_up" target="_blank"> Sign up</a>
+
+          <div class="formContainer">
+            <div class="CardContainer">
+              <div class="formContainer__wrapper">
+                <div class="textInputContainer">
+                  <input type="email" id="emailInput" class="textInputContainer__input" placeholder="E-MAIL" tabindex="1">
+                </div>
+                <div class="textInputContainer">
+                  <input type="password" id="pwdInput" class="textInputContainer__input" placeholder="PASSWORD" tabindex="2">
+                </div>
+              </div>
+            </div>
+            <div class="CardContainer buttonContainer">
+              <button id="loginBtn" class="formContainer__submitButton ">
+                LOG IN
+              </button>
+            </div>
+          </div>
+        </p>
+      </div>
+      <div class="need_payment">
+        <p>
+          Your free trial of FunDz has expired.
+        </p>
+        <p>
+          No worries - activate or change your account
+          <a href="https://app.fundz.net" target="_blank">here</a>.
+        </p>
+        <p>
+          Otherwise,
+          <a href="#" class='contact-us'>contact us</a>
+           to inquire about setting up a team account.
+        </p>
+      </div>
+
+      <div class="change-person-screen">
+        <a href="https://app.fundz.net/filters/new?profile_title=sales" target="_blank">
+          <div class="sales-person person row">
+            <div class="medium-3 columns image">
+              <img src="img/ic_sales_representative.png">
+            </div>
+            <div class="medium-9 columns info">
+              <h4>Sales Representative</h4>
+              <p>Find companies that have raised funds and contact</p>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://app.fundz.net/filters/new?profile_title=sales" target="_blank">
+          <div class="investment-person person row">
+            <div class="medium-3 columns image">
+              <img src="img/ic_money.png">
+            </div>
+            <div class="medium-9 columns info">
+              <h4>Investment Professional</h4>
+              <p>Find companies listed for sale and offer</p>
+            </div>
+          </div>
+        </a>
+        <a href="https://app.fundz.net/filters/new?profile_title=sales" target="_blank">
+          <div class="other-person person row">
+            <div class="medium-3 columns image">
+              <img src="img/ic_other.png">
+            </div>
+            <div class="medium-9 columns info">
+              <h4>Other</h4>
+              <p>Business analyst, publicist, legal, attorrey etc</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class='feed-container'>
+        <div class="feed-screen feed " id="cfeed"></div>
+        <div class="crowdfoundings-feed-screen feed active" id="crowdfoundings-cfeed"></div>
+      </div>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>
+
+
